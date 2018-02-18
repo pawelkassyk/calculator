@@ -37,6 +37,105 @@ public class MainActivity extends AppCompatActivity {
                 updateScreenBy("8");
             }
         });
+        button9 = findViewById(R.id.button9);
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("9");
+            }
+        });
+
+        buttonTimes = findViewById(R.id.buttonTimes);
+        buttonTimes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("X");
+            }
+        });
+        button4 = findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("4");
+            }
+        });
+        button5 = findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("5");
+            }
+        });
+        button6 = findViewById(R.id.button6);
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("6");
+            }
+        });
+        buttonMinus = findViewById(R.id.buttonMinus);
+        buttonMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("-");
+            }
+        });
+        button1 = findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("1");
+            }
+        });
+        button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("2");
+            }
+        });
+        button3 = findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("3");
+            }
+        });
+        buttonPlus = findViewById(R.id.buttonPlus);
+        buttonPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("+");
+            }
+        });
+        buttonC = findViewById(R.id.buttonC);
+        buttonC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("C");
+            }
+        });
+        button0 = findViewById(R.id.button0);
+        button0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("0");
+            }
+        });
+        buttonDivide = findViewById(R.id.buttonDivide);
+        buttonDivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("/");
+            }
+        });
+        buttonEquals = findViewById(R.id.buttonEquals);
+        buttonEquals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("=");
+            }
+        });
     }
 
     private void updateScreenBy(String clickedValue) {
