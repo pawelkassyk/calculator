@@ -26,10 +26,8 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String newValue;
-                if (screen.getText().toString().equals("0")) {
-                    newValue = "7";
-                } else {
+                String newValue = "7";
+                if (!screen.getText().toString().equals("0")) {
                     newValue = screen.getText().toString() + "7";
                 }
 
