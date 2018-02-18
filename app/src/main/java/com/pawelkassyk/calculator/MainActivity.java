@@ -26,17 +26,25 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String newValue = "7";
-                if (!screen.getText().toString().equals("0")) {
-                    newValue = screen.getText().toString() + "7";
-                }
+                updateScreenBy("7");
+            }
+        });
 
-                screen.setText(newValue);
+        button8 = findViewById(R.id.button8);
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateScreenBy("8");
             }
         });
     }
 
-    private void showToast(String text) {
-        Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+    private void updateScreenBy(String clickedValue){
+        String newValue = clickedValue;
+        if (!screen.getText().toString().equals("0")) {
+            newValue = screen.getText().toString() + clickedValue;
+        }
+
+        screen.setText(newValue);
     }
 }
