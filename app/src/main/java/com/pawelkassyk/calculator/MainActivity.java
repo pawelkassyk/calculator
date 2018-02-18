@@ -39,12 +39,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void updateScreenBy(String clickedValue){
+    private void updateScreenBy(String clickedValue) {
         String newValue = clickedValue;
-        if (!screen.getText().toString().equals("0")) {
+        if (screenIsNotZero()) {
             newValue = screen.getText().toString() + clickedValue;
         }
-
         screen.setText(newValue);
+    }
+
+    private boolean screenIsNotZero() {
+        return !screen.getText().toString().equals("0");
     }
 }
