@@ -39,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
         buttonDivide = findViewById(R.id.buttonDivide);
         buttonEquals = findViewById(R.id.buttonEquals);
 
+        if (savedInstanceState != null) {
+            String savedScreen = savedInstanceState.getString("param");
+            screen.setText(savedScreen);
+        }
+
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                displayViaPresenter("/");
             }
         });
         buttonEquals.setOnClickListener(new View.OnClickListener() {
@@ -143,4 +149,11 @@ public class MainActivity extends AppCompatActivity {
         String toDisplay = presenter.getScreenToDisplay(string, screen.getText().toString());
         screen.setText(toDisplay);
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("param", screen.getText().toString());
+    }
+
 }
